@@ -264,15 +264,12 @@ if __name__ == "__main__":
     # Import required libraries
     import traceback
     import requests
-    
+    # Ensure os and time are imported if not already (they are used below)
+    import os 
+    import time
+
     # Try to ensure clean startup
     try:
-        # Check if we're in a virtual environment, and activate if needed
-        if "VIRTUAL_ENV" not in os.environ and os.path.exists(".venv/bin/activate_this.py"):
-            logger.info("Activating virtual environment...")
-            with open(".venv/bin/activate_this.py") as f:
-                exec(f.read(), dict(__file__=".venv/bin/activate_this.py"))
-        
         # Clear the webhook synchronously before we start
         logger.info("Clearing webhook before starting...")
         try:
