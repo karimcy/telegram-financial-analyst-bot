@@ -1,0 +1,7 @@
+camel-ai==0.1.6.7
+openai>=1.14.0
+python-telegram-bot==20.8
+python-dotenv>=1.0.0
+yfinance>=0.2.38
+httpx==0.26.0
+Pillow 
